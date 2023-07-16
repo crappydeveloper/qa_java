@@ -12,35 +12,43 @@ public class FelineTest
     public void eatMeatTest() throws Exception
     {
         Feline feline = new Feline();
+
+        List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба");
         List<String> actual = feline.eatMeat();
 
-        assertEquals(Arrays.asList("Животные", "Птицы", "Рыба"), actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void getFamilyTest()
     {
         Feline feline = new Feline();
+
+        String expected = "Кошачьи";
         String actual = feline.getFamily();
 
-        assertEquals("Кошачьи", actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void getKittensWithoutParametersTest()
     {
         Feline feline = new Feline();
+
+        int expected = 1;
         int actual = feline.getKittens();
 
-        assertEquals(1, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void getKittensWithParametersTest()
     {
         Feline feline = new Feline();
+
+        int expected = 2;
         int actual = feline.getKittens(2);
 
-        assertEquals(2, actual);
+        assertEquals(expected, actual);
     }
 }

@@ -16,7 +16,7 @@ public class ParameterizedLionTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Наличие/отсутствие гривы у льва. Тестовые данные: {0} {1}")
     public static Object[][] getLionData() {
         return new Object[][] {
                 {"Самец", true},

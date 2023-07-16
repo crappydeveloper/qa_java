@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Lion {
 
-    Predator feline;
+    private Predator feline;
 
     boolean hasMane;
 

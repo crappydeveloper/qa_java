@@ -19,8 +19,10 @@ public class CatTest {
     public void getSoundTest() {
         Cat cat = new Cat(feline);
 
+        String expected = "Мяу";
         String actual = cat.getSound(); // вызвали метод объекта с аргументом
-        assertEquals("Мяу", actual);
+
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -28,8 +30,10 @@ public class CatTest {
         Cat cat = new Cat(feline);
 
         Mockito.when(feline.eatMeat()).thenReturn(Arrays.asList("Мясо", "Курица"));
+
+        List<String> expected = Arrays.asList("Мясо", "Курица");
         List<String> actual = cat.getFood();
 
-        assertEquals(Arrays.asList("Мясо", "Курица"), actual);
+        assertEquals(expected, actual);
     }
 }

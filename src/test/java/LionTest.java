@@ -24,9 +24,11 @@ public class LionTest
         Lion lion = new Lion(feline, "Самец" );
 
         Mockito.when(feline.getKittens()).thenReturn(1);
+
+        int expected = 1;
         int actual = lion.getKittens();
 
-        assertEquals(1, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -55,8 +57,10 @@ public class LionTest
         Lion lion = new Lion(feline, "Самец");
 
         Mockito.when(feline.getFood("Хищник")).thenReturn(Arrays.asList("Буйволы", "Зебры", "Дикообразы"));
+
+        List<String> expected = Arrays.asList("Буйволы", "Зебры", "Дикообразы");
         List<String> actual = lion.getFood();
 
-        assertEquals(Arrays.asList("Буйволы", "Зебры", "Дикообразы"), actual);
+        assertEquals(expected, actual);
     }
 }
